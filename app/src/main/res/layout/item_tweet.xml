@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#000000"
+    android:padding="15dp">
+
+    <View
+        android:id="@+id/imgAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginEnd="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Steven Ortiz"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="5dp"/>
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@sortiz"
+                android:textColor="#888888"
+                android:textSize="14sp"
+                android:layout_marginEnd="5dp"/>
+
+            <TextView
+                android:id="@+id/tvTiempo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="· 2h"
+                android:textColor="#888888"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTextoTweet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Este es un tweet de prueba para ver cómo se acomoda el texto en múltiples líneas."
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:lineSpacingExtra="2dp"
+            android:layout_marginBottom="10dp"/>
+
+        <ImageView
+            android:id="@+id/imgMedia"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"
+            android:background="#15202B"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingEnd="40dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/btnComentar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textColor="#888888"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_chat"
+                android:drawableTint="#888888" />
+
+            <TextView
+                android:id="@+id/btnRetweet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textColor="#888888"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_rt"
+                android:drawableTint="#888888" />
+
+            <TextView
+                android:id="@+id/btnLike"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textColor="#888888"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_like"
+                android:drawableTint="#888888" />
+
+            <ImageView
+                android:id="@+id/btnCompartir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share"
+                app:tint="#888888" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

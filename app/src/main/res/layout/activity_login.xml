@@ -5,7 +5,8 @@
     android:orientation="vertical"
     android:background="#000000"
     android:padding="30dp"
-    android:gravity="center">
+    android:gravity="center"
+    android:fitsSystemWindows="true">
 
     <TextView
         android:layout_width="match_parent"

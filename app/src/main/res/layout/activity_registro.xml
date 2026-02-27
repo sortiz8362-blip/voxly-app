@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -161,19 +162,19 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tu correo electrónico"
-                android:textColor="#FFFFFF"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="10dp"/>
+                android:text="Tus credenciales de acceso"
+                android:textColor="#888888"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lo usaremos para mantener tu cuenta segura."
-                android:textColor="#888888"
+                android:text="Correo electrónico"
+                android:textColor="#FFFFFF"
                 android:textSize="14sp"
-                android:layout_marginBottom="20dp"/>
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"/>
 
             <EditText
                 android:id="@+id/etEmail"
@@ -182,9 +183,59 @@
                 android:background="#15202B"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#AAB8C2"
-                android:hint="Correo electrónico"
+                android:hint="ejemplo@gmail.com"
                 android:inputType="textEmailAddress"
                 android:padding="15dp"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Código de verificación"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/etCodigoVerificacion"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:background="#15202B"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#AAB8C2"
+                    android:hint="123456"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:letterSpacing="0.3"
+                    android:padding="15dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <Button
+                    android:id="@+id/btnEnviarCodigo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:backgroundTint="#1DA1F2"
+                    android:textColor="#FFFFFF"
+                    android:text="Enviar código"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbTerminos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acepto los Términos y Condiciones y la Política de Privacidad"
+                android:textColor="#888888"
+                android:buttonTint="#1DA1F2"
                 android:layout_marginBottom="25dp"/>
 
             <Button
@@ -220,7 +271,7 @@
                 android:background="#15202B"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#AAB8C2"
-                android:hint="Nombre de usuario (Ej: sortiz8362)"
+                android:hint="Nombre de usuario (Ej: sortiz)"
                 android:padding="15dp"
                 android:layout_marginBottom="15dp"/>
 
@@ -231,7 +282,7 @@
                 android:background="#15202B"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#AAB8C2"
-                android:hint="Contraseña (mín. 8 caracteres)"
+                android:hint="Crea una contraseña"
                 android:inputType="textPassword"
                 android:padding="15dp"
                 android:layout_marginBottom="25dp"/>
@@ -243,7 +294,8 @@
                 android:backgroundTint="#1DA1F2"
                 android:textColor="#FFFFFF"
                 android:text="Finalizar y crear cuenta"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textAllCaps="false"/>
         </LinearLayout>
 
     </LinearLayout>

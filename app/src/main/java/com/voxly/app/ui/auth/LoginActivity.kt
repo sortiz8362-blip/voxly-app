@@ -52,6 +52,9 @@ class LoginActivity : AppCompatActivity() {
                     runOnUiThread {
                         Toast.makeText(this@LoginActivity, "¡Conectado a Appwrite con éxito!", Toast.LENGTH_LONG).show()
                         // En el siguiente paso haremos que te lleve a la pantalla del Muro
+                        val intent = android.content.Intent(this@LoginActivity, com.voxly.app.ui.home.MuroTweetsActivity::class.java)
+                        intent.flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
                     }
                 } catch (error: Exception) {
                     runOnUiThread {

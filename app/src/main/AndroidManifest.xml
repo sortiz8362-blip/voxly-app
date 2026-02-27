@@ -24,6 +24,9 @@
         <activity
             android:name=".ui.auth.RegistroActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.home.MuroTweetsActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
