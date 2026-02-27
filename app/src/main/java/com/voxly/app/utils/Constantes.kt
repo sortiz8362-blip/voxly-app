@@ -9,6 +9,8 @@ object Constantes {
     const val COLECCION_PERFILES = "perfiles"
     const val COLECCION_TWEETS = "tweets"
     const val COLECCION_COMENTARIOS = "comentarios"
+    const val COLECCION_NOTIFICACIONES = "notificaciones"
+    const val COLECCION_MENSAJES = "mensajes"
 
     // Buckets de Storage
     const val BUCKET_PERFILES = "perfiles"

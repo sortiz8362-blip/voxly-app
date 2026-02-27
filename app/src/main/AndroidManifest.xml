@@ -27,6 +27,9 @@
         <activity
             android:name=".ui.home.MuroTweetsActivity"
             android:exported="false" />
+        <activity android:name=".ui.home.CrearPostActivity" android:exported="false"/>
+        <activity android:name=".ui.profile.PerfilActivity" android:exported="false"/>
+        <activity android:name=".ui.chat.ChatActivity" android:exported="false"/>
     </application>
 
 </manifest>
