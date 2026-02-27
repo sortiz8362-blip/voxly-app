@@ -21,7 +21,6 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         // 1. Encendemos el motor de Appwrite
-        AppwriteConfig.inicializar(this)
 
         // 2. Vinculamos los elementos del diseño a variables
         val etEmail = findViewById<EditText>(R.id.etEmail)
