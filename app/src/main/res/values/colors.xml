@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Colores base de la marca (Estilo X) -->
+    <color name="voxly_blue">#1D9BF0</color>
+    <color name="voxly_blue_dark">#1A8CD8</color>
+    <color name="voxly_black">#000000</color>
+    <color name="voxly_dark_gray">#16181C</color>
+    <color name="voxly_light_gray">#EFF3F4</color>
+    <color name="voxly_border_gray">#2F3336</color>
+    <color name="voxly_text_gray">#71767B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red_error">#F4212E</color>
 </resources>

@@ -1,76 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="[http://schemas.android.com/apk/res/android](http://schemas.android.com/apk/res/android)"
+    xmlns:app="[http://schemas.android.com/apk/res-auto](http://schemas.android.com/apk/res-auto)"
+    xmlns:tools="[http://schemas.android.com/tools](http://schemas.android.com/tools)"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#000000"
-    android:padding="30dp"
-    android:gravity="center"
-    android:fitsSystemWindows="true">
+    android:padding="24dp"
+    tools:context=".ui.auth.LoginActivity">
+
+    <ImageView
+        android:id="@+id/logoApp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Voxly"
-        android:textColor="#1DA1F2"
-        android:textSize="45sp"
+        android:layout_marginTop="32dp"
+        android:text="Inicia sesión en Voxly"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:textAlignment="center"
-        android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="¿Qué está pasando ahora?"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textAlignment="center"
-        android:layout_marginBottom="40dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoApp" />
 
     <EditText
         android:id="@+id/etEmail"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#15202B"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#AAB8C2"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_edittext"
         android:hint="Correo electrónico"
         android:inputType="textEmailAddress"
-        android:padding="15dp"
-        android:layout_marginBottom="15dp"/>
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#15202B"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#AAB8C2"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_edittext"
         android:hint="Contraseña"
         android:inputType="textPassword"
-        android:padding="15dp"
-        android:layout_marginBottom="25dp"/>
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
     <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:backgroundTint="#FFFFFF"
-        android:textColor="#000000"
+        android:id="@+id/btnEntrar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_button_rounded"
         android:text="Iniciar sesión"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="16sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <TextView
-        android:id="@+id/tvRegistrarse"
-        android:layout_width="match_parent"
+        android:id="@+id/tvRegistro"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿No tienes cuenta? Regístrate"
-        android:textColor="#1DA1F2"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"/>
+        android:layout_marginBottom="32dp"
+        android:text="¿No tienes una cuenta? Regístrate"
+        android:textColor="@color/voxly_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

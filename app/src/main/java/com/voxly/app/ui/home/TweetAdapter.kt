@@ -1,5 +1,5 @@
 package com.voxly.app.ui.home
-
+import coil.load
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -38,6 +38,16 @@ class TweetAdapter(
         holder.tvTextoTweet.text = tweet.texto
 
         holder.btnComentar.text = if (tweet.cantidadComentarios > 0) tweet.cantidadComentarios.toString() else ""
+
+        if (tweet.mediaUrl != null && tweet.mediaUrl.isNotEmpty()) {
+            holder.imgMedia.visibility = android.view.View.VISIBLE
+            // AQUÍ ES DONDE OCURRE LA MAGIA DE COIL
+            holder.imgMedia.load(tweet.mediaUrl) {
+                crossfade(true) // Animación suave al cargar
+            }
+        } else {
+            holder.imgMedia.visibility = android.view.View.GONE
+        }
 
         // --- PINTADO VISUAL DE LIKES ---
         val leDiLike = tweet.likesUsuarios.contains(miUserId)
@@ -100,5 +110,6 @@ class TweetAdapter(
         val btnRetweet: TextView = itemView.findViewById(R.id.btnRetweet)
         val btnLike: TextView = itemView.findViewById(R.id.btnLike)
         val btnCompartir: ImageView = itemView.findViewById(R.id.btnCompartir)
+        val imgMedia: ImageView = itemView.findViewById(R.id.imgMedia)
     }
 }
